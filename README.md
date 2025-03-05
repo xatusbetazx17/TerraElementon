@@ -515,9 +515,7 @@ Run:
 python run_simulation.py
 ~~~
 You’ll see console output describing each step.:
-
-
-Copy
+~~~
 [INFO] Loaded deployment config:
   [MachineSettings]
     machinen...
@@ -534,7 +532,7 @@ Copy
 [INFO] Manufacturing simulation complete.
 [INFO] Terraforming creature ID = TerraElementonV3_Embryo_1678048693
 This demonstrates a working Python project you can run locally—yet it’s still purely fictional regarding actual biology.
-
+~~~
 ## Final Notes
 
 This code is safe to run on your local machine as it only prints messages and simulates steps.
