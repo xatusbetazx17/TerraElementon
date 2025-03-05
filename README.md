@@ -54,20 +54,22 @@ terraelementon_v3/
 └── src
     ├── morphoprint_advanced.py
     └── TerraElementonV3_morphoPrint.py
-    ~~~
+
+~~~
+
 requirements.txt: Python packages required for the simulation.
 run_simulation.py: Entry point script that orchestrates the entire mock process.
 specs/: Contains the fictional YAML genome spec and the INI config file.
 src/:
 morphoprint_advanced.py: A dummy library that simulates advanced 4D/bioprinting functionalities.
 TerraElementonV3_morphoPrint.py: The main printing script that loads the genome spec and config, then “prints” TerraElementon V3.
-Disclaimer
+## Disclaimer
+
 This code is not intended to be used in real genetic engineering or actual terraforming projects. It is purely educational and fictional.
 No real technology exists that can execute these biological transformations or produce such an organism.
-yaml
-Copy
 
----
+
+
 
 ## 2. `requirements.txt`
 
@@ -76,7 +78,6 @@ We’ll include basic packages (like PyYAML for parsing YAML and configparser fo
 PyYAML==6.0 configparser==5.3.0
 
 yaml
-Copy
 
 *(You can add or remove as needed.)*
 
@@ -86,7 +87,7 @@ Copy
 
 This is our **fictional** genome specification, similar to previous examples:
 
-```yaml
+~~~
 organismName: TerraElementonV3
 version: 3.0.0
 author: "Fictional Institute of Exobiology"
@@ -173,7 +174,9 @@ terraElementonEnhancements:
         - O2_concentration < 8%
         - or temperature < -40
     docileMode: true
-4. specs/TerraElementonV3_deploy.ini
+~~~
+
+## 4. specs/TerraElementonV3_deploy.ini
 Fictional “deployment” config:
 
 ini
@@ -211,11 +214,16 @@ burrowDepth=5000
 [Notifications]
 onCompleteSendEmail=ExoBiologyLead@fictional-lab.org
 onErrorNotifyOps=true
-5. src/morphoprint_advanced.py
+
+~~~
+~~~
+##5. src/morphoprint_advanced.py
+
 A mock library simulating advanced printing. This file can run in a real Python environment, but it won’t actually do any physical printing.
 
-python
-Copy
+
+~~~
+
 # src/morphoprint_advanced.py
 import time
 
@@ -295,11 +303,16 @@ class PrintProfile:
         self.extrusionSpeed = extrusionSpeed
         self.curingMethod = curingMethod
         self.environmentControl = environmentControl or {}
-6. src/TerraElementonV3_morphoPrint.py
+~~~
+
+## 6. src/TerraElementonV3_morphoPrint.py
+
 Our “printing” script. It references morphoprint_advanced.py and simulates the layer-building process.
 
-python
-Copy
+
+
+~~~
+
 # src/TerraElementonV3_morphoPrint.py
 
 import time
@@ -420,11 +433,14 @@ def print_terra_elementon_v3(genome_file_path):
     embryo_id = "TerraElementonV3_Embryo_" + str(int(time.time()))
     print(f"[INFO] Finished printing. Embryo ID: {embryo_id}")
     return embryo_id
-7. run_simulation.py
+~~~
+
+## 7. run_simulation.py
 A main entry point that ties everything together. It loads the INI config, figures out which steps to run, and executes them.
 
-python
-Copy
+
+~~~
+
 # run_simulation.py
 
 import os
@@ -453,6 +469,7 @@ def main():
         for key, val in config[section].items():
             print(f"    {key} = {val}")
     
+
     # Step 1: Load Genome Spec
     step1 = config["ManufacturingSteps"]["1"]
     # example: "LoadGenomeSpec TerraElementon_V3_genomeSpec.yml"
