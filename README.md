@@ -495,7 +495,9 @@ def main():
 
 if __name__ == "__main__":
     main()
-How the Simulation Works
+~~~
+
+## How the Simulation Works
 Loads TerraElementonV3_deploy.ini.
 Reads the steps under [ManufacturingSteps]:
 Step 1 expects a “LoadGenomeSpec …” line (which we parse to find the genome file path).
@@ -505,15 +507,16 @@ The print_terra_elementon_v3 function simulates loading the genome, printing lay
 Running the Code
 Clone or download this folder structure.
 Install dependencies:
-bash
-Copy
+~~~
 pip install -r requirements.txt
+~~~
 Run:
-bash
-Copy
+~~~
 python run_simulation.py
-You’ll see console output describing each step, e.g.:
-csharp
+~~~
+You’ll see console output describing each step.:
+
+
 Copy
 [INFO] Loaded deployment config:
   [MachineSettings]
@@ -532,7 +535,8 @@ Copy
 [INFO] Terraforming creature ID = TerraElementonV3_Embryo_1678048693
 This demonstrates a working Python project you can run locally—yet it’s still purely fictional regarding actual biology.
 
-Final Notes
+## Final Notes
+
 This code is safe to run on your local machine as it only prints messages and simulates steps.
 No real “creature” is produced; the code is for educational and imaginative purposes.
 If you want to further extend the simulation, you could add:
